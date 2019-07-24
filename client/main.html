@@ -1,0 +1,90 @@
+<head>
+  <meta charset="utf-8"/>
+    <title>
+        Social Network
+
+    </title>
+    <link rel="stylesheet" 
+    type="text/css" href="style.css"/>
+</head>
+
+<body>
+
+ 
+  {{>loginButtons}}
+ 
+
+ <div id="wrapper">
+  <div id="profile-area">
+  {{>profileArea}}
+
+  </div>
+  <div id="feed-area">
+      
+      {{>postForm}}
+      {{#if currentUser}}
+      {{>postsList}}
+      {{/if}}
+          
+          
+      
+  </div>
+  
+</div>
+</body>
+
+
+<template name="postsList">
+  <ul class="post-list">
+    {{#each posts}}
+    <li class='post'>
+      <div>{{content}}</div>
+      <div>{{username}}<a class='follow-link'>Follow</a></div>
+
+    </li>
+    {{/each}}
+  </ul>
+ 
+</template>
+<template name="postForm">
+    <form id="post-form">
+        <textarea id="content"></textarea>
+        <button type="submit">Say</button>
+    </form>
+    
+   
+  </template>
+
+
+  <template name="profileArea">
+    {{#if currentUser}}
+    <div id="side-profile" class="side-box"><a class="filter-user">{{currentUser.username}}</a></div>
+    {{/if}}
+    <div id="side-all" class="side-box"><a class="filter-user">Community</a></div>
+    {{#if currentUser}}
+    <div id="side-youlike" class="side-box">
+        <h3>Following</h3>
+        <div class="box-content">
+          {{#each username in following}}
+                <div><a class="filter-user">{{username}}</a></div>
+            {{/each}}
+        </div>
+
+    </div>
+    <div id=side-likeyou class="side-box">
+        <h3>Follows you</h3>
+        <div class="box-content">
+          {{#each user in followers}}
+            <div><a class="filter-user">{{user.username}}</a></div>
+            {{/each}}
+           
+
+        </div>
+
+
+
+
+    </div>
+    {{/if}}
+  </template>
+

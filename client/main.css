@@ -1,0 +1,152 @@
+.post{
+  background: yellow;
+}
+#side-profile{
+  background-color:purple;
+}
+#side-all{
+  background-color:lightcoral;
+}
+#side-youlike{
+  background-color:blue;
+}
+#side-likeyou{
+  background-color:lightseagreen;
+}
+.side-box{
+  color:white;
+  font-size: 16px;
+  text-align: center;
+  margin:10px 0px;
+  padding: 15px;
+  box-shadow: 2px 2px 2px grey;
+}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+}
+.post{
+  background: lightskyblue;
+  color:white;
+  font-size: 16px;
+  margin: 15px 0px;
+  padding: 15px;
+  box-shadow: 2px 2px 2px grey;
+  list-style: none;
+}
+#post-form{
+  text-align: center;
+  height: 100px;
+  background-color: #eceff1;
+  padding: 15px;
+  padding-bottom: 35px;
+}
+#post-form textarea{
+  display: block;
+  width: 99%;
+  font-size: 16px;
+  resize: none;
+  height: 60px;
+}
+#post-form button{
+  color:white;
+  background: black;
+  font-size: 16px;
+  line-height: 45px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: all 1s;
+  border: 0px;
+}
+#post-form button:hover{
+  background-color: grey;
+}
+
+#wrapper a{
+  color:white;
+  text-decoration: none;
+}
+#wrapper a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.post div:first-child{
+ margin-bottom: 15px;
+}
+.post div:nth-child(2){
+  font-size:12px;
+  border-top: 1px solid darkblue;
+  padding-top: 15px;
+}
+.post div:nth-child(2) a{
+  font-weight:bold;
+  float: right;
+  display: block;
+}
+#wrapper{
+  max-width:808px;
+  margin:0px auto;
+  
+}
+#profile-area{
+  width:28%;
+  float: left;
+}
+.side-box h3{
+  margin-top :0px;
+  margin-bottom: 15px;
+}
+#feed-area{
+  width:72%;
+  padding-top: 10px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  float: left;
+
+}
+.post-list{
+  padding: 0px;
+}
+
+@media (max-width:650px){
+
+  #profile-area, #feed-area{
+
+          width:100%;
+          max-width: 100%;
+          padding-left: 0px;
+
+  }
+  .side-box{
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      margin:5px 0px;
+  }
+  .side-box:nth-child(even){
+      margin-left: 3%;
+      width: 47%
+  }
+  .box-content{
+      height: 100px;
+      margin-bottom: 15px;
+      overflow-y:auto;
+
+
+  }
+
+}
+@media  (max-width:480px){
+  .side-box{
+      width:100%;
+  }
+  .side-box:nth-child(even){
+      margin-left: 0%;
+      width: 100%;
+  }
+  .box-content{
+      height: auto;
+  }
+
+}
